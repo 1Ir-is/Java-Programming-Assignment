@@ -1,0 +1,128 @@
+JFDML JFormDesigner: "7.0.7.0.1134" Java: "11.0.15" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp panel1::l:::x}"
+			"$verticalGroup": "par l {seq l {comp panel1:::p:341:p, space :0:72:x}}"
+		} ) {
+			name: "this"
+			"title": "Student Management"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l {seq {par l {seq l {comp idLabel:::p:40:p, space :p:36:p, comp idTextField:::p:67:p, space u:::p, comp nameLabel:::p:70:p, space :::p, comp nameTextField:::p:144:p}, seq l {comp genderLabel:::p:70:p, space s:::p, comp maleRadioButton:::p:67:p, space :::p, comp femaleRadioButton:::p:70:p, space :::p, comp otherRadioButton:::p:70:p}}, space :p:34:p, par l:::p {comp addButton::::91:x, comp updateButton:::::x}, space s:::p, par l:::p {comp deleteButton::::89:x, comp searchButton:::::x}}, seq {space :p:355:p, comp wrongInput:::p:52:p}, seq l {comp gradeLabel:::p:39:p, space :p:37:p, comp gradeTextField:::p:67:p}}, space :0:70:x}, seq t {comp scrollPane1::::671:x, space :::p}}}}"
+				"$verticalGroup": "par l {seq l {space u:::p, par b {comp idLabel::b:p:30:p, comp nameLabel::b:p:30:p, comp nameTextField::b:p::p, comp addButton::b:p::p, comp searchButton::b:p::p, comp idTextField::b:p::p}, space u:::p, par b {comp maleRadioButton::b:p::p, comp femaleRadioButton::b:p::p, comp otherRadioButton::b:p::p, comp genderLabel::b:p:30:p, comp updateButton::b:p::p, comp deleteButton::b:p::p}, par l {seq l {space :p:62:p, comp wrongInput:::p::p}, seq l {space u:::p, par b {comp gradeTextField::b:p::p, comp gradeLabel::b:p:30:p}}}, space :::p, comp scrollPane1:::p:239:p, space :::x}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "nameLabel"
+					"text": "Full Name"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "genderLabel"
+					"text": "Gender"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "gradeLabel"
+					"text": "Grade"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "idLabel"
+					"text": "ID"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "nameTextField"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "idTextField"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "otherRadioButton"
+					"text": "Other"
+					"$buttonGroup": new FormReference( "buttonGroup1" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "otherRadioButton", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "femaleRadioButton"
+					"text": "Female"
+					"$buttonGroup": new FormReference( "buttonGroup1" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "femaleRadioButton", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "maleRadioButton"
+					"text": "Male"
+					"$buttonGroup": new FormReference( "buttonGroup1" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "maleRadioButton", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "male", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "gradeTextField"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "wrongInput"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "tableStudent"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "ID" )
+							add( "Full Name" )
+							add( "Gender" )
+							add( "Grade" )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+						}, new java.util.Vector {
+							add( new com.jformdesigner.model.SwingTableColumn( null, 50, 0, 0, true ) )
+							add( new com.jformdesigner.model.SwingTableColumn( null, 150, 0, 0, true ) )
+							add( new com.jformdesigner.model.SwingTableColumn( null, 50, 0, 0, true ) )
+							add( new com.jformdesigner.model.SwingTableColumn( null, 50, 0, 0, true ) )
+						} )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addButton"
+					"text": "Add"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "add", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addBtn", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addBtn", false ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addBtn", false ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "add", false ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "searchButton"
+					"text": "Search"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchBtn", false ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "sortBtn", false ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "sortBtn", false ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "search", false ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "updateButton"
+					"text": "Update"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "update", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateBtn", false ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteButton"
+					"text": "Delete"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delete", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteButton", true ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteBtn", false ) )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteFunction", false ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 685, 445 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}
